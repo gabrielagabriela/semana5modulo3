@@ -25,6 +25,8 @@ describe('CalculadoraService', () => {
     expect(resultado).toBe(5);
   });
 
+  
+
   it('deve lançar um erro ao tentar dividir por zero', () => {
     expect(() => service.dividir(10, 0)).toThrowError('Não é permitida a divisão por zero');
   });
