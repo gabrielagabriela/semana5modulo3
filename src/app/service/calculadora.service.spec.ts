@@ -19,4 +19,13 @@ describe('CalculadoraService', () => {
     const resultado = service.multiplicar(4, 5);
     expect(resultado).toBe(20);
   });
+
+  it('deve retornar o resultado correto ao dividir dois números', () => {
+    const resultado = service.dividir(10, 2);
+    expect(resultado).toBe(5);
+  });
+
+  it('deve lançar um erro ao tentar dividir por zero', () => {
+    expect(() => service.dividir(10, 0)).toThrowError('Não é permitida a divisão por zero');
+  });
 });
