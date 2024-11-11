@@ -10,7 +10,8 @@ describe('CalculadoraService', () => {
     service = TestBed.inject(CalculadoraService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('deve retornar o resultado correto ao subtrair dois números', () => {
+    const resultado = service.subtrair(10, 5);
+    expect(resultado).toBe(5);
   });
 });
